@@ -1,7 +1,7 @@
 """Verify exported AIT per-session scores against frozen per-scene metrics.
 
-The score files are not distributed by this repository. Obtain them under the
-data provider's terms and pass the output directory using --prediction-dir.
+Extract data/ait_test_scores.zip and pass its test_scores directory using
+--prediction-dir. Observe the attribution terms in the archive.
 No individual labels or scores are printed or saved by this script.
 """
 import argparse, csv, json, math

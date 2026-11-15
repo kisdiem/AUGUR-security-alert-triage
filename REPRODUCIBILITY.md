@@ -2,7 +2,7 @@
 
 ## Scope
 
-The commands below check synthetic implementation contracts and recompute selected paper-table means from already exported per-scene or per-seed metrics. They do not train models, perform inference, or compute AP from sample-level predictions. They do not independently validate ground-truth labels, model checkpoints or upstream training. These distinctions apply to all numerical output.
+The one-command core check below validates synthetic implementation contracts and recomputes selected paper-table means from already exported per-scene or per-seed metrics. It does not train models, perform inference, or compute AP from sample-level predictions. A separate optional command below recomputes AIT AP from released per-session scores. They do not independently validate ground-truth labels, model checkpoints or upstream training. These distinctions apply to all numerical output.
 
 ## Environment and one-command check
 
@@ -28,7 +28,7 @@ The expected values are transcribed from the manuscript, and are comparison targ
 
 ## AIT per-session score audit
 
-The frozen AIT test-score files were checked separately with recompute_ait_scores.py: 80 NPZ files, 1,080 fold/seed/scene/arm rows, maximum absolute difference 3.33e-16 against the included per-scene CSV. This checks predictions against exported metrics, not model training or label correctness. A compact receipt is in results/ait_score_audit.json. The checked NPZ files contain the authors' predictions and are not included: obtaining AIT-ADS from its provider alone does not supply those predictions, and rebuilding them would additionally require the missing validated training pipeline and artifacts.
+The frozen AIT test-score files were checked separately with recompute_ait_scores.py: 80 NPZ files, 1,080 fold/seed/scene/arm rows, maximum absolute difference 3.33e-16 against the included per-scene CSV. This checks predictions against exported metrics, not model training or label correctness. A compact receipt is in results/ait_score_audit.json. The authors' corresponding regenerated NPZ files are included in data/ait_test_scores.zip. Obtaining AIT-ADS alone does not supply these predictions; independently rebuilding them would require the missing validated training pipeline and artifacts.
 
 If the matching prediction files are available, independently run:
 
@@ -40,10 +40,30 @@ Both scene-holdout protocols use all eight scenes in the development history; di
 
 ## Data, code and missing materials
 
-AIT-ADS, AutoLabel and CERT r4.2 require obtaining the source data under the respective providers' conditions and licenses. The original data, all derived caches, trained checkpoints and complete adapted baseline pipelines are not included. Some snapshots/ scripts depend on historical experimental directories and should be treated as archived code, not end-to-end entry points. Exact raw-to-table reproducibility requires independently packaging and validating those dependencies, frozen split manifests, checkpoint provenance and sample-level predictions, subject to distribution permissions. This bundle makes no claim that those steps have been completed.
+AIT-ADS, AutoLabel and CERT r4.2 require obtaining the source data under the respective providers' conditions and licenses. The original data, all derived caches, trained checkpoints and complete adapted baseline pipelines are not included. AIT test-score predictions are available separately as described below; AutoLabel and CERT sample-level prediction files remain undistributed. Some snapshots/ scripts depend on historical experimental directories and should be treated as archived code, not end-to-end entry points. Exact raw-to-table reproducibility requires independently packaging and validating those dependencies, frozen split manifests, checkpoint provenance and sample-level predictions, subject to distribution permissions. This bundle makes no claim that those steps have been completed.
 
 MANIFEST.sha256 covers the snapshot files and the updated repository README. The supplemental REPRODUCIBILITY.sha256 covers the new reproduction scripts, documentation, expected values, and inputs used in these checks. Both manifests use SHA-256 and paths relative to the repository root.
 
 ## Additional sample-score audits
 
 See [score_audits/README.md](score_audits/README.md) for aggregate CERT and AutoLabel audit summaries, optional scripts, separate dependencies and undistributed inputs.
+
+## Recomputing AIT from released per-session scores
+
+The 80 AIT test-score files are available as `data/ait_test_scores.zip`.
+They contain artificial scene/session IDs, binary session labels and numerical
+model scores, but no raw alerts or model weights. Extract the archive under an
+isolated output directory and run:
+
+    python -m zipfile -e data/ait_test_scores.zip ./ait_score_inputs
+    python recompute_ait_scores.py --prediction-dir ./ait_score_inputs/test_scores --output ./ait_score_check.csv
+
+The script computes tie-aware AP and recall at the retrospective 1% FPR budget
+for each scene/fold/seed/arm and checks 1,080 entries against the exported scene
+metrics. It does not train or infer, and does not independently validate labels.
+The archive includes AIT-ADS attribution, CC BY 4.0 license and modifications.
+Original NPZ containers were regenerated; therefore their byte hashes need not
+match the unpublished source-container digest in results/ait_score_audit.json.
+
+For the original training-chain dependency inventory and remaining missing
+inputs, see TRAINING_DEPENDENCIES.md.

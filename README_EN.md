@@ -21,8 +21,7 @@ checkpoints. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the exact
 coverage, inputs, and limitations.
 
 An additional [AIT score-audit summary](results/ait_score_audit.json) reports
-checks performed on the authors' per-session scores; those score files are not
-included in this repository.
+checks performed on the authors' per-session scores; the 80 AIT score files are available in `data/ait_test_scores.zip`.
 
 ## Contents
 
@@ -36,7 +35,7 @@ included in this repository.
 
 AIT-ADS, AutoLabel, and CERT r4.2 data must be obtained from their respective
 providers and used in accordance with their licenses. Raw data, full derived
-caches, trained model checkpoints, per-session predictions, and complete
+caches, trained model checkpoints, AutoLabel/CERT predictions, and complete
 adapted baseline pipelines are not included. Some historical scripts require
 those missing inputs, so this snapshot does not yet support independent
 raw-data-to-table reproduction.
