@@ -1,0 +1,17 @@
+{
+  "task": "AutoLabel common 60-second windows with signed original group roles, same three seeds and raw official window labels",
+  "methods": {
+    "LightGBM": "Original ExtraTrees current-event features, samples and supervision; independent LightGBM with validated leaves; top three event scores per window.",
+    "NLLog": "Detection-path adaptation. AutoLabel has syscalls in place of application-alert signatures; render them as typed descriptions, pooled with fold-specific training-only IDF using the same frozen MiniLM, followed by the prior LightGBM settings and train-only CV.",
+    "DeepCASE": "Official causal within-source endpoint context of ten prior typed observations per exercise (up to 24 h), coarsened to at most 24 deterministic, syscall-stratified query events per window, full observation stream supplies their context; official 10 epochs and 100 query iterations, window pooled readout and original LightGBM head.",
+    "UnseenLog": "Window-level bidirectional syscall transition graph with counts/intervals; upstream Transformer, augmenters and MinMax, 40 initial epochs, 3 RISE rounds and validation F1 selection, independent role vocabulary.",
+    "Velox": "Existing clean-prefix CVE results and exact roster-equivalent folds; the two application-only rosters retrain using the signed eight-epoch pipeline. Top 3 incident mapped event losses. Original ET/AUGUR reused unchanged."
+  },
+  "selection": "Same 20 exercises per source scene; label of raw window is any case-positive event. Fit and choose candidates with train and validation only. Score every common test window and preserve empty-projection windows. For graph/context methods the sample is the window. Same metric and labels across methods, supervision differs.",
+  "seeds": [
+    42,
+    1337,
+    31415
+  ],
+  "notes": "Internal cross-group benchmark, explicitly task-adapted; loop over both protocols; no broad external validity claim."
+}

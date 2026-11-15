@@ -1,0 +1,2017 @@
+{
+  "summary": {
+    "application": {
+      "current": {
+        "means": [
+          0.3619146734569072,
+          0.25
+        ],
+        "cells": 12,
+        "complete": true
+      },
+      "state": {
+        "means": [
+          0.6749285237967687,
+          0.5292207792207791
+        ],
+        "cells": 12,
+        "complete": true
+      },
+      "LightGBM": {
+        "means": [
+          0.4912277072036011,
+          0.47727272727272724
+        ],
+        "cells": 12,
+        "complete": true
+      },
+      "NLLog": {
+        "means": [
+          0.2278278309750328,
+          0.07692307692307693
+        ],
+        "cells": 12,
+        "complete": true
+      },
+      "DeepCASE": {
+        "means": [
+          0.13194528841658573,
+          0.07807054057054057
+        ],
+        "cells": 12,
+        "complete": true
+      },
+      "UnseenLog": {
+        "means": [
+          0.14154103334761003,
+          0.004166666666666667
+        ],
+        "cells": 12,
+        "complete": true
+      },
+      "Velox": {
+        "means": [
+          0.5042784152129608,
+          0.47727272727272724
+        ],
+        "cells": 12,
+        "complete": true
+      }
+    },
+    "cve_group": {
+      "current": {
+        "means": [
+          0.2805210892383324,
+          0.2
+        ],
+        "cells": 15,
+        "complete": true
+      },
+      "state": {
+        "means": [
+          0.8141423601664298,
+          0.7122655122655123
+        ],
+        "cells": 15,
+        "complete": true
+      },
+      "LightGBM": {
+        "means": [
+          0.5675387643444728,
+          0.44107744107744107
+        ],
+        "cells": 15,
+        "complete": true
+      },
+      "NLLog": {
+        "means": [
+          0.24773562653070258,
+          0.12518518518518518
+        ],
+        "cells": 15,
+        "complete": true
+      },
+      "DeepCASE": {
+        "means": [
+          0.20267876025728845,
+          0.14509379509379508
+        ],
+        "cells": 15,
+        "complete": true
+      },
+      "UnseenLog": {
+        "means": [
+          0.27304790402741197,
+          0.07740740740740741
+        ],
+        "cells": 15,
+        "complete": true
+      },
+      "Velox": {
+        "means": [
+          0.47104807660463177,
+          0.4421356421356421
+        ],
+        "cells": 15,
+        "complete": true
+      }
+    }
+  },
+  "rows": [
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.05263157894736842,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "state",
+      "AP": 0.6726187877389586,
+      "Recall1FPR": 0.5909090909090909,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.8315483218080619,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.49649209451970994,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.06754344131145368,
+      "Recall1FPR": 0.045454545454545456,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.1333742810661176,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.914041404140414,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.05263157894736842,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "state",
+      "AP": 0.10836322926331436,
+      "Recall1FPR": 0.045454545454545456,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.8909624100239936,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.44596770216977966,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.049502824156561154,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.4645727594660212,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.914041404140414,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.05263157894736842,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "state",
+      "AP": 0.2038587957113454,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.8312309699869508,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.49332338895867534,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.047288590090253255,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.08909348244094248,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__kibana",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.914041404140414,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.46935805843169265,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "state",
+      "AP": 0.9131710758377426,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.03899922681966681,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.06391935640999434,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.05224677904438248,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.05048076923076923,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.46935805843169265,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "state",
+      "AP": 0.921174477696217,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.03359457717682643,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.06597386774612529,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.061732244105638504,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.05048076923076923,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "state",
+      "AP": 0.9125529293092204,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.07740613855478597,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.12365611417456841,
+      "Recall1FPR": 0.09523809523809523,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.045553552755437564,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.05048076923076923,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.06369067970676581,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "state",
+      "AP": 0.43631354689699803,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.06378235972034119,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.33578857038975174,
+      "Recall1FPR": 0.3076923076923077,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.05929833912714042,
+      "Recall1FPR": 0.03076923076923077,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.06142015917904227,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.05233494363929147,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.06911154029154834,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "state",
+      "AP": 0.4790141415441889,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.06378235972034119,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.335607110893899,
+      "Recall1FPR": 0.3076923076923077,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.039664279254943625,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.03650242145830741,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.05310457516339869,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.063681772624688,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "state",
+      "AP": 0.45207530156323916,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.06378235972034119,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.33775776531491414,
+      "Recall1FPR": 0.3076923076923077,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.052487679864413245,
+      "Recall1FPR": 0.015384615384615385,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.1321494299739688,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__solr",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.05233494363929147,
+      "Recall1FPR": 0.0,
+      "positive": 65,
+      "windows": 1268
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "current",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.04541398031896844,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.12090946321010454,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.38184241322055784,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "current",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.04807692307692308,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.18508369879541553,
+      "Recall1FPR": 0.15,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.15729030634737273,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "current",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.0455064935064935,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.7080158068580552,
+      "Recall1FPR": 0.6,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.0827145711135315,
+      "Recall1FPR": 0.05,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "application",
+      "fold": "application__joomla",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.05263157894736842,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "state",
+      "AP": 0.6726187877389586,
+      "Recall1FPR": 0.5909090909090909,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.8315483218080619,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.49649209451970994,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.06754344131145368,
+      "Recall1FPR": 0.045454545454545456,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.1333742810661176,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.914041404140414,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.05263157894736842,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "state",
+      "AP": 0.10836322926331436,
+      "Recall1FPR": 0.045454545454545456,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.8909624100239936,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.44596770216977966,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.049502824156561154,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.4645727594660212,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.914041404140414,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.05263157894736842,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "state",
+      "AP": 0.2038587957113454,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.8312309699869508,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.49332338895867534,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.047288590090253255,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.08909348244094248,
+      "Recall1FPR": 0.0,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.914041404140414,
+      "Recall1FPR": 0.9090909090909091,
+      "positive": 22,
+      "windows": 422
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "state",
+      "AP": 0.9173859726405772,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.033821610915607765,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.06955198801876465,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.05176200770504007,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.05084745762711865,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "state",
+      "AP": 0.9281095715878326,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.03820501016636285,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.07255837584943758,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.042371558284138834,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.9096045197740114,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "state",
+      "AP": 0.9285377135844426,
+      "Recall1FPR": 0.9047619047619048,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.0498812351543943,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.052383667793615994,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.10832529410578515,
+      "Recall1FPR": 0.047619047619047616,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.052137570546511844,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.05084745762711865,
+      "Recall1FPR": 0.0,
+      "positive": 21,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.04716981132075472,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.5,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.6870996988136947,
+      "Recall1FPR": 0.7,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.04534336524275427,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.4925087079470609,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.049019607843137254,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.04716981132075472,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.5,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.032101829146547856,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.032078018093038334,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.33214662745678075,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.049019607843137254,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.04716981132075472,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.5,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.030051848973717855,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.04059421362187948,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.5404331563047912,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.049019607843137254,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 425
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "current",
+      "AP": 0.2524554974211635,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "state",
+      "AP": 0.8167703280956262,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 0.5361403374491877,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.3735489989210652,
+      "Recall1FPR": 0.3333333333333333,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.517954195990821,
+      "Recall1FPR": 0.4888888888888889,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.47743091881533617,
+      "Recall1FPR": 0.4222222222222222,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 0.05507955936352509,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "current",
+      "AP": 0.25366588396493805,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "state",
+      "AP": 0.8165229081804277,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 0.5361403374491875,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.44179230456883,
+      "Recall1FPR": 0.4,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.48471719154904336,
+      "Recall1FPR": 0.4,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.4861251354285426,
+      "Recall1FPR": 0.4222222222222222,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 0.05507955936352509,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "current",
+      "AP": 0.25264708092133253,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "state",
+      "AP": 0.8199680956939226,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 0.2374153829865282,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.45224884611054655,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.49071493696595997,
+      "Recall1FPR": 0.4444444444444444,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.31191506426843363,
+      "Recall1FPR": 0.26666666666666666,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 0.05507955936352509,
+      "Recall1FPR": 0.0,
+      "positive": 45,
+      "windows": 843
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "current",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "LightGBM",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "NLLog",
+      "AP": 0.04541398031896844,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "DeepCASE",
+      "AP": 0.12090946321010454,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "UnseenLog",
+      "AP": 0.38184241322055784,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "method": "Velox",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "current",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "LightGBM",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "NLLog",
+      "AP": 0.04807692307692308,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "DeepCASE",
+      "AP": 0.18508369879541553,
+      "Recall1FPR": 0.15,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "UnseenLog",
+      "AP": 0.15729030634737273,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "method": "Velox",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "current",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "state",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "LightGBM",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "NLLog",
+      "AP": 0.0455064935064935,
+      "Recall1FPR": 0.0,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "DeepCASE",
+      "AP": 0.7080158068580552,
+      "Recall1FPR": 0.6,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "UnseenLog",
+      "AP": 0.0827145711135315,
+      "Recall1FPR": 0.05,
+      "positive": 20,
+      "windows": 421
+    },
+    {
+      "kind": "cve_group",
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "method": "Velox",
+      "AP": 1.0,
+      "Recall1FPR": 1.0,
+      "positive": 20,
+      "windows": 421
+    }
+  ],
+  "registries": {
+    "fold_file": "961aa7458b9268f7c3b599017373c4b2bdb41a0948e3bce9f7d726a26304bf11",
+    "protocol": "d61e6db51d333d7991eeb41beb3474fea49af822736ee777c9bcdf43e8526b0f",
+    "runner": "5d362aebdf544e79b9d4c917ba4b808f915265fa249342b2e7e286792bbaea1c"
+  }
+}
