@@ -1,0 +1,619 @@
+{
+  "method": "window-level sklearn AP and max TPR where FPR <= 0.01; test units pooled per fold",
+  "numpy_version": "2.2.6",
+  "sklearn_version": "1.6.1",
+  "rows": [
+    {
+      "fold": "application__joomla",
+      "seed": 42,
+      "arm": "current",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__joomla",
+      "seed": 42,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__joomla",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__joomla",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__joomla",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__joomla",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__kibana",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.05263157894736842,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__kibana",
+      "seed": 42,
+      "arm": "state",
+      "ap": 0.6726187877389586,
+      "recall_at_1pct_fpr": 0.5909090909090909,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__kibana",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.05263157894736842,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__kibana",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 0.10836322926331436,
+      "recall_at_1pct_fpr": 0.045454545454545456,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__kibana",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.05263157894736842,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__kibana",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 0.2038587957113454,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.46935805843169265,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__pgadmin",
+      "seed": 42,
+      "arm": "state",
+      "ap": 0.9131710758377426,
+      "recall_at_1pct_fpr": 0.9047619047619048,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.46935805843169265,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__pgadmin",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 0.921174477696217,
+      "recall_at_1pct_fpr": 0.9047619047619048,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.0498812351543943,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__pgadmin",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 0.9125529293092204,
+      "recall_at_1pct_fpr": 0.9047619047619048,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__solr",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.06369067970676581,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 65,
+      "negative": 1203,
+      "unit_files": 60,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__solr",
+      "seed": 42,
+      "arm": "state",
+      "ap": 0.43631354689699803,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 65,
+      "negative": 1203,
+      "unit_files": 60,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__solr",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.06911154029154834,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 65,
+      "negative": 1203,
+      "unit_files": 60,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__solr",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 0.4790141415441889,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 65,
+      "negative": 1203,
+      "unit_files": 60,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__solr",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.063681772624688,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 65,
+      "negative": 1203,
+      "unit_files": 60,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "application__solr",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 0.45207530156323916,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 65,
+      "negative": 1203,
+      "unit_files": 60,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "arm": "current",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 42,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2015-8562",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 401,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.2524554974211635,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 45,
+      "negative": 798,
+      "unit_files": 40,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 42,
+      "arm": "state",
+      "ap": 0.8167703280956262,
+      "recall_at_1pct_fpr": 0.4444444444444444,
+      "positive": 45,
+      "negative": 798,
+      "unit_files": 40,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.25366588396493805,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 45,
+      "negative": 798,
+      "unit_files": 40,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 0.8165229081804277,
+      "recall_at_1pct_fpr": 0.4444444444444444,
+      "positive": 45,
+      "negative": 798,
+      "unit_files": 40,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.25264708092133253,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 45,
+      "negative": 798,
+      "unit_files": 40,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2017-12629",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 0.8199680956939226,
+      "recall_at_1pct_fpr": 0.4444444444444444,
+      "positive": 45,
+      "negative": 798,
+      "unit_files": 40,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.05263157894736842,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 42,
+      "arm": "state",
+      "ap": 0.6726187877389586,
+      "recall_at_1pct_fpr": 0.5909090909090909,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.05263157894736842,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 0.10836322926331436,
+      "recall_at_1pct_fpr": 0.045454545454545456,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.05263157894736842,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2018-17246",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 0.2038587957113454,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 22,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.04716981132075472,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 20,
+      "negative": 405,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 42,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 405,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.04716981132075472,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 20,
+      "negative": 405,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 405,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.04716981132075472,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 20,
+      "negative": 405,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2019-0193",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 1.0,
+      "recall_at_1pct_fpr": 1.0,
+      "positive": 20,
+      "negative": 405,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "arm": "current",
+      "ap": 0.0498812351543943,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 42,
+      "arm": "state",
+      "ap": 0.9173859726405772,
+      "recall_at_1pct_fpr": 0.9047619047619048,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "arm": "current",
+      "ap": 0.0498812351543943,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 1337,
+      "arm": "state",
+      "ap": 0.9281095715878326,
+      "recall_at_1pct_fpr": 0.9047619047619048,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "arm": "current",
+      "ap": 0.0498812351543943,
+      "recall_at_1pct_fpr": 0.0,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    },
+    {
+      "fold": "cve_group__CVE-2022-4223",
+      "seed": 31415,
+      "arm": "state",
+      "ap": 0.9285377135844426,
+      "recall_at_1pct_fpr": 0.9047619047619048,
+      "positive": 21,
+      "negative": 400,
+      "unit_files": 20,
+      "ap_matches_metrics": true
+    }
+  ],
+  "summary": {
+    "application/current": {
+      "ap": 0.36191467345690725,
+      "recall_at_1pct_fpr": 0.25
+    },
+    "application/state": {
+      "ap": 0.6749285237967687,
+      "recall_at_1pct_fpr": 0.5292207792207793
+    },
+    "cve_group/current": {
+      "ap": 0.2805210892383325,
+      "recall_at_1pct_fpr": 0.2
+    },
+    "cve_group/state": {
+      "ap": 0.8141423601664298,
+      "recall_at_1pct_fpr": 0.7122655122655123
+    }
+  }
+}

@@ -43,3 +43,7 @@ Both scene-holdout protocols use all eight scenes in the development history; di
 AIT-ADS, AutoLabel and CERT r4.2 require obtaining the source data under the respective providers' conditions and licenses. The original data, all derived caches, trained checkpoints and complete adapted baseline pipelines are not included. Some snapshots/ scripts depend on historical experimental directories and should be treated as archived code, not end-to-end entry points. Exact raw-to-table reproducibility requires independently packaging and validating those dependencies, frozen split manifests, checkpoint provenance and sample-level predictions, subject to distribution permissions. This bundle makes no claim that those steps have been completed.
 
 MANIFEST.sha256 covers the snapshot files and the updated repository README. The supplemental REPRODUCIBILITY.sha256 covers the new reproduction scripts, documentation, expected values, and inputs used in these checks. Both manifests use SHA-256 and paths relative to the repository root.
+
+## Additional sample-score audits
+
+See [score_audits/README.md](score_audits/README.md) for aggregate CERT and AutoLabel audit summaries, optional scripts, separate dependencies and undistributed inputs.

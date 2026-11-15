@@ -45,3 +45,5 @@ The eight AIT scenes participated in method development. AutoLabel and CERT
 use task-specific state adaptations, not the complete AIT three-branch model.
 Their evaluation units differ. The retrospective Recall@1% FPR statistic is a
 test-ranking budget, not a frozen deployment threshold.
+
+Aggregate-only CERT and AutoLabel sample-score audit reports and optional verification scripts are documented in [score_audits/README.md](score_audits/README.md).
