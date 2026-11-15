@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "cells": 80,
+  "evaluation": "240 validation thresholds across 80 cells and scene-level AP, ranking recall, frozen-threshold rates, and 2% record-budget totals; no retraining or ground-truth verification",
+  "results": {
+    "611": {
+      "111": {
+        "scene_macro_AP": 0.897382546532859,
+        "recall_at_test_1pct_fpr": 0.9158836996336994,
+        "frozen_positive_recall": 0.9252481389578164,
+        "frozen_negative_review_rate": 0.030422376113187505,
+        "record_budget_sums": [
+          436,
+          3831,
+          263260,
+          263260
+        ]
+      },
+      "011": {
+        "scene_macro_AP": 0.8693382518530985,
+        "recall_at_test_1pct_fpr": 0.853224329434007,
+        "frozen_positive_recall": 0.8977618752215527,
+        "frozen_negative_review_rate": 0.020214989870728776
+      },
+      "current_only": {
+        "scene_macro_AP": 0.8192523256407709,
+        "recall_at_test_1pct_fpr": 0.8179739749497816,
+        "frozen_positive_recall": 0.847264194139194,
+        "frozen_negative_review_rate": 0.046428868917981474,
+        "record_budget_sums": [
+          453,
+          4630,
+          263260,
+          263260
+        ]
+      }
+    },
+    "422": {
+      "111": {
+        "scene_macro_AP": 0.8618689430595918,
+        "recall_at_test_1pct_fpr": 0.9054285197329552,
+        "frozen_positive_recall": 0.8149588650596717,
+        "frozen_negative_review_rate": 0.012093077026654991,
+        "record_budget_sums": [
+          846,
+          3971,
+          526530,
+          526530
+        ]
+      },
+      "011": {
+        "scene_macro_AP": 0.8222836780138267,
+        "recall_at_test_1pct_fpr": 0.8421875738508804,
+        "frozen_positive_recall": 0.7999809833983224,
+        "frozen_negative_review_rate": 0.012020799811812541
+      },
+      "current_only": {
+        "scene_macro_AP": 0.7636953674425956,
+        "recall_at_test_1pct_fpr": 0.7678657095592583,
+        "frozen_positive_recall": 0.7569310897435899,
+        "frozen_negative_review_rate": 0.015001853712445187,
+        "record_budget_sums": [
+          808,
+          7201,
+          526530,
+          526530
+        ]
+      }
+    }
+  }
+}

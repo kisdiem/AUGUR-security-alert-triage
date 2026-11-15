@@ -1,0 +1,15 @@
+{
+  "sealed_archive_sha256": "7e73c2b9ca39b4b95bf95aa571ac153d9bdf4ccb260a4d37144328dc36914c35",
+  "public_test_archive_sha256": "6c21d2aaadf56f2a50d1e5a837390ae3b8b8af16ba70b5a9877e54dd4e0dbf01",
+  "paper_results_sha256": "b9fb3f809a46e7dfdc94af68e6be7e8ad5d9b770f65c3b22ed823b77242ae775",
+  "source_costs_sha256": "16d0041c99ee1ff6ca73c9b912adde55f1698da6b3c57dabb4ee1f697a542e53",
+  "minimal_archive_sha256": "8ec9ca30919a5fe9cf04ccb1d6e7161b26d4b688a1e42d7042712fc8137b0076",
+  "cells": 80,
+  "roles_per_cell": 2,
+  "models": [
+    "111",
+    "011",
+    "current_only"
+  ],
+  "session_cost_rows": 11482
+}
