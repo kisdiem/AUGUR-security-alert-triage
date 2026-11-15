@@ -1,0 +1,16 @@
+{
+  "scope": "AIT author-generated per-session test-score files, not training or ground-truth verification",
+  "protocols": ["6/1/1", "4/2/2"],
+  "seeds": [42, 1337, 31415, 2025, 8675309],
+  "test_npz_files_checked": 80,
+  "scene_fold_seed_arm_rows_checked": 1080,
+  "arms_checked": ["000", "001", "010", "011", "100", "101", "110", "111", "current_only"],
+  "metrics": ["average precision with ties grouped", "recall at no more than 1% negative FPR, ties grouped"],
+  "maximum_absolute_metric_difference_to_included_scene_csv": 3.3306690738754696e-16,
+  "python_version": "3.14.6",
+  "numpy_version": "2.5.2",
+  "test_npz_collection_digest_method": "SHA-256 of sorted sha256sum output for relative .test.npz filenames",
+  "test_npz_collection_digest": "f9e2b9e931a4cc546b2489c761948b90ad8cb3b963c380c68fc3ba450fab876e",
+  "prediction_files_included": false,
+  "note": "The eight scenes also participated in method development. This score audit does not establish unseen-enterprise generalization or independent raw-to-model reproduction."
+}
