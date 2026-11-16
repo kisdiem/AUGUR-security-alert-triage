@@ -14,11 +14,11 @@ python -m pip install -r requirements.txt
 python run_reproduction.py --output-dir ./reproduced_tables
 ```
 
-This runs two synthetic implementation-contract checks and recomputes selected
-AIT, AutoLabel, and CERT table entries from exported aggregate metrics. It does
-not train a model, read raw data, or independently validate labels or
-checkpoints. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the exact
-coverage, inputs, and limitations.
+This checks the state and fusion contracts on synthetic streams, recomputes
+240 validation cutoffs and review decisions from released AIT-ADS scores,
+and checks 36 archived AIT, AutoLabel, and CERT table rows. The default run
+needs only the files in this repository and NumPy. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
+for the commands, verified quantities, and the scope of the optional extended audit.
 
 An additional [AIT score-audit summary](results/ait_score_audit.json) reports
 checks performed on the authors' per-session scores; the 80 AIT score files are available in `data/ait_test_scores.zip`.
