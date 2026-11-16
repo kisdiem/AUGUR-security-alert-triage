@@ -2,7 +2,7 @@
 
 ## Scope
 
-The one-command core check below validates synthetic implementation contracts and recomputes selected paper-table means from already exported per-scene or per-seed metrics. It does not train models, perform inference, or compute AP from sample-level predictions. A separate optional command below recomputes AIT AP from released per-session scores. They do not independently validate ground-truth labels, model checkpoints or upstream training. These distinctions apply to all numerical output.
+The default check runs synthetic implementation contracts, recalculates AIT ranking and operating points from saved scores, and checks archived table summaries. The saved-score replay and table-aggregation inputs are separate. Training, label generation, raw telemetry parsing and service performance require their own inputs and experiments.
 
 ## Environment and one-command check
 
@@ -14,7 +14,17 @@ Use Python 3.11 or newer; install numpy==2.3.5 from requirements.txt in an isola
     python -m pip install -r requirements.txt
     python run_reproduction.py --output-dir ./reproduced_tables
 
-The program runs state_124/state_contract_checks.py, test_current.py, and reproduce_core_tables.py sequentially. The first two tests use synthetic examples and check event-before-write, role-link, fusion, and related interface invariants; passing does not imply successful intrusion detection. The third reads frozen export files without modifying them, and checks 36 rounded AP/Recall@1% FPR paper rows against expected_core_tables.csv. Use a separate output folder; never write into results/.
+The runner checks the state and fusion contracts, verifies the archived prediction hash, recalculates 240 frozen validation cutoffs across 80 AIT fold--seed cells, and checks 36 rounded rows against the archived table export. It writes the recalculated AIT score receipt to ait_saved_score_receipt.json and creates CSVs for the archive's table summaries. Table numbers in CSV filenames follow the original export. Keep the output directory separate from the input files.
+
+The score receipt distinguishes test-ranking Recall@1% FPR from the cutoff fitted on validation and then frozen for testing. For the fixed-record evaluation, the code assigns 2% of each fold's eligible records to review. It visits sessions in decreasing score order and adds a whole session only when its records fit in the remaining allowance. Test appearances in repeated folds can refer to the same session.
+
+### Extended matched AIT score audit
+
+Extract the companion augur_score_audit.zip and pass the directory that contains SHA256.json:
+
+    python run_reproduction.py --output-dir reproduced_extended --score-bundle path/to/extracted/augur_score_audit
+
+This additionally verifies 320 array files and 560 validation cutoffs and reproduces 80 exact full-model queues and 120 full-model scene decision rows. All three normalized 900-tree arms can be replayed. For the original-expression 900-tree current and host controls, only aggregate receipts are available. The extension verifies those receipts at their stated granularity. Its input archive accompanies the manuscript artifact and is supplied separately from the code.
 
 ## Data lineage and table coverage
 

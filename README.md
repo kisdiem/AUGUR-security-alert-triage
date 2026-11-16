@@ -18,11 +18,10 @@
 
 建议使用 Python 3.11 或更新版本与 NumPy 2.3.5。
 
-    python state_124/state_contract_checks.py
-    python test_current.py
-    python recompute_ait.py
+    python -m pip install -r requirements.txt
+    python run_reproduction.py --output-dir reproduced_tables
 
-第一项和第二项使用合成输入，检查先读后写、有限关系和分数融合；它们不是安全检测效果实验。第三项依据已经导出的 AIT 场景指标，按场景和种子等权复算正文对应的 AP 与 Recall@1% FPR，不会重新训练模型。
+从全新克隆即可核验状态与融合契约、从封存分数重算 240 个验证阈值及对应的 AIT 队列决策，并复算归档表格的 36 项指标。新结果写入指定输出目录。完整说明和扩展核验命令见 [REPRODUCIBILITY.md](REPRODUCIBILITY.md)。
 
 ## 数据与复现范围
 

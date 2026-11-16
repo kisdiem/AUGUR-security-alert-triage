@@ -21,3 +21,8 @@ the scripts' --help for expected directory structure and output. The source
 prediction files and baseline checkpoints are not publicly distributed in
 this artifact. Review applicable data and derivative-data licensing before
 redistributing any inputs.
+
+
+## Extended AIT matched controls
+
+[The extended verifier](verify_extended_ait.py) accepts the companion score and receipt archive described in [REPRODUCIBILITY.md](../REPRODUCIBILITY.md). The default repository smoke test uses the smaller bundled AIT score archive. The optional archive extends which released scores, normalized controls and original-expression receipts can be checked.
