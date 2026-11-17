@@ -1,4 +1,4 @@
-# Reproducing selected results from exported metrics
+# Replaying saved scores and checking archived table rows
 
 ## Scope
 
@@ -24,15 +24,15 @@ Extract the companion augur_score_audit.zip and pass the directory that contains
 
     python run_reproduction.py --output-dir reproduced_extended --score-bundle path/to/extracted/augur_score_audit
 
-This additionally verifies 320 array files and 560 validation cutoffs and reproduces 80 exact full-model queues and 120 full-model scene decision rows. All three normalized 900-tree arms can be replayed. For the original-expression 900-tree current and host controls, only aggregate receipts are available. The extension verifies those receipts at their stated granularity. Its input archive accompanies the manuscript artifact and is supplied separately from the code.
+The extended run verifies 320 array files and recomputes 560 validation cutoffs. It recomputes 80 full-model queues and compares decision counts, record costs, and 120 scene-level decision count rows with archived receipts. All three normalized 900-tree arms can be replayed. For the original-expression 900-tree current and host controls, only aggregate receipts are available. The extension checks those receipts at their stated granularity. Identical counts and costs can arise from different selected sessions, so membership and ordering would require the original ordered queue or its digest. The companion archive is supplied separately from the repository.
 
 ## Data lineage and table coverage
 
-| Output | Input included here | What is computed | Paper coverage |
+| Output | Input included here | What is computed | Coverage in the v16 manuscript |
 |---|---|---|---|
-| ait_tables_2_5_7.csv | results/ait_per_scene.csv | Average repeated holdouts per scene and seed, then average five seeds and eight scenes with equal weight; check against results/ait_aggregate.json. | All eight entries of Table 5; AUGUR and current-only rows of Table 2; available fallback rows of Table 7. Table 2 other baselines and Table 1 are not independently recomputed here. |
-| autolabel_table_3.csv | results/autolabel_aggregate.json, rows | Check each 4-app/5-vulnerability group has each of three seeds; average equally and compare to the stored summary. | Table 3 means. Inputs are window-model metric exports, not window predictions. |
-| cert_table_4.csv | results/cert_aggregate.json, score_file_audit | Mean five seed APs and five seed TP/1830 at the stated 1% budget. | Table 4; the files contain per-seed summaries, not individual activity scores. |
+| ait_tables_2_5_7.csv | results/ait_per_scene.csv | Average repeated holdouts per scene and seed, then average five seeds and eight scenes with equal weight; check against results/ait_aggregate.json. | All eight ablation rows in Table 7, the full AUGUR and 300-tree current-session rows in Table 3, and fallback rows in Table 9. The 900-tree matched control and alternate baseline rows of Table 3 require separate evidence. Table 1C and Table 4 matched original-expression controls are receipt-level in the extended audit. |
+| autolabel_table_3.csv | results/autolabel_aggregate.json, rows | Check each 4-app/5-vulnerability group has each of three seeds; average equally and compare to the stored summary. | Selected Table 5 method means from archived window-level metrics. The elapsed-minute prior and individual window predictions are outside this export. |
+| cert_table_4.csv | results/cert_aggregate.json, score_file_audit | Mean five seed APs and five seed TP/1830 at the stated 1% budget. | Table 6, from per-seed summaries. Individual activity scores are outside this export. |
 
 The expected values are transcribed from the manuscript, and are comparison targets rather than new ground truth. Each exported metric file is itself a research result requiring independent provenance verification. The 1% FPR value is the retrospective test-ranking budget metric defined in the paper; it is not a deployment threshold selected on the test set.
 
