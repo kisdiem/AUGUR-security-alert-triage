@@ -1,0 +1,30 @@
+{
+  "scope": "single fold-seed numeric inputs to frozen scores; not raw-data, labels, training, or external validation",
+  "protocol": "422",
+  "fold": "fold_01",
+  "seed": 42,
+  "test_scenes": [
+    "wheeler",
+    "wilson"
+  ],
+  "n_sessions": 3520,
+  "exact_array_equal": true,
+  "max_abs_error": 0.0,
+  "software": {
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.6.0"
+  },
+  "source_sha256": {
+    "role_model": "46e385743e6192a52bb21c0138b8ed8ebc3917ab0a2f2fd742adb9ca7f47f4a9",
+    "cumulative_model": "2de0083f39cb4ef716a7df7bcbbd68fa5c3ace62fbff6e841a4fa0671b3f71dc",
+    "expert_model": "b9b61db903cbb4241292b0da5dc2f113b503999e86c936febeedd0bf9e55ea2c",
+    "sealed_test_score": "4e344a1362845ff5b8aabc39411cd33fec8a5737f0d25c3bfffdb706185949ec"
+  },
+  "output_sha256": {
+    "numeric_inputs.npz": "533bd313b653fea74a4b2d4d624316550f56bd2343149deb4b52e1a67411433a",
+    "trusted_model.joblib": "f729a7c48785d82dd01c4a293530254e3e9a2ec62270a8d69f9b28c3a8cf7f54"
+  },
+  "security": "Serialized estimators are executable content; load only from a trusted source. Numeric features may reveal information and require disclosure review."
+}

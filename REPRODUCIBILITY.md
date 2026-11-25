@@ -1,79 +1,62 @@
-# Replaying saved scores and checking archived table rows
+# Reproduction layers and verified scope
 
-## Scope
+Use `requirements-reproduction.txt` for the portable release. NumPy-only historical
+score scripts remain usable separately. The full current entry is:
 
-The default check runs synthetic implementation contracts, recalculates AIT ranking and operating points from saved scores, and checks archived table summaries. The saved-score replay and table-aggregation inputs are separate. Training, label generation, raw telemetry parsing and service performance require their own inputs and experiments.
+```sh
+python run_reproduction.py --output-dir reproduced --include-training
+```
 
-## Environment and one-command check
-
-Use Python 3.11 or newer; install numpy==2.3.5 from requirements.txt in an isolated environment. No GPU or input dataset is needed for these checks.
-
-    python -m venv .venv
-    # Linux/macOS: source .venv/bin/activate
-    # Windows PowerShell: .venv\Scripts\Activate.ps1
-    python -m pip install -r requirements.txt
-    python run_reproduction.py --output-dir ./reproduced_tables
-
-The runner checks the state and fusion contracts, verifies the archived prediction hash, recalculates 240 frozen validation cutoffs across 80 AIT fold--seed cells, and checks 36 rounded rows against the archived table export. It writes the recalculated AIT score receipt to ait_saved_score_receipt.json and creates CSVs for the archive's table summaries. Table numbers in CSV filenames follow the original export. Keep the output directory separate from the input files.
-
-The score receipt distinguishes test-ranking Recall@1% FPR from the cutoff fitted on validation and then frozen for testing. For the fixed-record evaluation, the code assigns 2% of each fold's eligible records to review. It visits sessions in decreasing score order and adds a whole session only when its records fit in the remaining allowance. Test appearances in repeated folds can refer to the same session.
-
-### Extended matched AIT score audit
-
-Extract the companion augur_score_audit.zip and pass the directory that contains SHA256.json:
-
-    python run_reproduction.py --output-dir reproduced_extended --score-bundle path/to/extracted/augur_score_audit
-
-The extended run verifies 320 array files and recomputes 560 validation cutoffs. It recomputes 80 full-model queues and compares decision counts, record costs, and 120 scene-level decision count rows with archived receipts. All three normalized 900-tree arms can be replayed. For the original-expression 900-tree current and host controls, only aggregate receipts are available. The extension checks those receipts at their stated granularity. Identical counts and costs can arise from different selected sessions, so membership and ordering would require the original ordered queue or its digest. The companion archive is supplied separately from the repository.
-
-## Data lineage and table coverage
-
-| Output | Input included here | What is computed | Coverage in the v16 manuscript |
+| Layer | Entry/input | What it checks | What it does not establish |
 |---|---|---|---|
-| ait_tables_2_5_7.csv | results/ait_per_scene.csv | Average repeated holdouts per scene and seed, then average five seeds and eight scenes with equal weight; check against results/ait_aggregate.json. | All eight ablation rows in Table 7, the full AUGUR and 300-tree current-session rows in Table 3, and fallback rows in Table 9. The 900-tree matched control and alternate baseline rows of Table 3 require separate evidence. Table 1C and Table 4 matched original-expression controls are receipt-level in the extended audit. |
-| autolabel_table_3.csv | results/autolabel_aggregate.json, rows | Check each 4-app/5-vulnerability group has each of three seeds; average equally and compare to the stored summary. | Selected Table 5 method means from archived window-level metrics. The elapsed-minute prior and individual window predictions are outside this export. |
-| cert_table_4.csv | results/cert_aggregate.json, score_file_audit | Mean five seed APs and five seed TP/1830 at the stated 1% budget. | Table 6, from per-seed summaries. Individual activity scores are outside this export. |
+| State | `state_124/state_contract_checks.py`, `test_current.py`, `portable/test_replay.py` | Read-before-write, persistence, role facts, label independence and implementation contracts on explicit synthetic streams | Detection accuracy or real raw-data replay |
+| Original scores | `ait_saved_score_audit/` | 80 cells, 240 validation cutoffs and original metric/queue receipts | Training, inference or independent ground truth |
+| Entity switch | `portable/data/entity_switch.zip` | 160 validation/test arrays, 160 cutoffs, exact registered fusion, AP and Recall@1% FPR | Removing all entity inputs or refitting each arm |
+| Matched controls | `portable/data/matched_controls.zip` | 160 original-expression arrays, 240 cutoffs, full/current/archived-host scores and deterministic record queues | New performance experiments or original ordered-list receipt equivalence |
+| Frozen inference | `portable/fixtures/numeric422/` | Actual 900-main-tree +160-expert-tree scoring for 3,520 test sessions | Raw embedding, label reconstruction or all-fold inference |
+| Numerical training | same fixture, `portable/train.py` | One 4/2/2 fold/seed, all six estimators, original prepared edits and recorded parameters; validation seal before test scoring | All 80-cell training, raw preprocessing or 6/1/1 context-head retraining |
+| Archived tables | `reproduce_core_tables.py` | 36 rows from exported AIT, AutoLabel and CERT metric summaries | External task inference or full upstream-baseline reproduction |
 
-The expected values are transcribed from the manuscript, and are comparison targets rather than new ground truth. Each exported metric file is itself a research result requiring independent provenance verification. The 1% FPR value is the retrospective test-ranking budget metric defined in the paper; it is not a deployment threshold selected on the test set.
+Every score archive has a SHA-256 manifest. Every prepared numerical training
+fixture has an input manifest. Runtime code rejects a changed score archive,
+train/validation session overlap, wrong shapes and unrecognized frozen software
+versions. The dependency lock is the tested portable environment, not an assertion
+that every older experiment used that environment.
 
-## AIT per-session score audit
+## Statistics and thresholds
 
-The frozen AIT test-score files were checked separately with recompute_ait_scores.py: 80 NPZ files, 1,080 fold/seed/scene/arm rows, maximum absolute difference 3.33e-16 against the included per-scene CSV. This checks predictions against exported metrics, not model training or label correctness. A compact receipt is in results/ait_score_audit.json. The authors' corresponding regenerated NPZ files are included in data/ait_test_scores.zip. Obtaining AIT-ADS alone does not supply these predictions; independently rebuilding them would require the missing validated training pipeline and artifacts.
+AP is the sum of precision weighted by recall increments, with tied scores admitted
+together. Recall@1% FPR is the best test-ranking recall under a 1% negative budget.
+It is separate from frozen operational outcomes. Operational cutoffs are computed
+from validation negatives using the original strict boundary and are then applied
+to test scores. Repeated 4/2/2 appearances are averaged within scene/seed before
+the equal-scene mean; standard deviations concern five seed means.
 
-If the matching prediction files are available, independently run:
+The record queue allows floor(2% of test record volume) per fold. Sessions sort by
+descending score then ID; a session that does not fit is skipped. The verifier
+saves ordered selected IDs and their digest, rather than claiming that equal
+counts prove equal historical membership. Unique-positive counts take the union
+within each seed. Labels follow the benchmark policy, not independent adjudication
+of all policy-negative activity.
 
-    python recompute_ait_scores.py --prediction-dir <directory-containing-npz> --reference-csv results/ait_per_scene.csv --output <new-directory>/ait_score_metrics.csv
+## Independent raw reconstruction and other methods
 
-Expected inputs are 80 files named {611|422}_fold_{01..08}_{42|1337|31415|2025|8675309}.test.npz. Each must contain one-dimensional arrays ids, y and score arrays 000 through 111 plus current_only, with aligned lengths; IDs have the scene prefix before the first underscore. Binary y and finite numeric scores are required. All ties in scores are evaluated together. Output is one CSV row per protocol/fold/seed/scene/arm, containing only AP and Recall@1% FPR, with no sample IDs, labels or individual scores. The script halts on missing files, invalid arrays, or a discrepancy exceeding 1e-10.
+Obtain provider data under its license. An independent raw-to-table run would
+also need the raw source-to-session and label mapping, embedding banks and training
+weights, full controlled-view preparation and every upstream adaptation.
+`TRAINING_DEPENDENCIES.md` inventories that original chain. The numerical fixture
+and portable entries close selected gaps; they do not make that chain disappear.
+Historical table-numbered CSV names are retained for compatibility; use result
+group names and the current paper's row labels when comparing revisions.
 
-Both scene-holdout protocols use all eight scenes in the development history; different fold/seed runs are not eight independent blind deployments. The score audit does not expand that evaluation claim.
+AutoLabel/CERT exported metric summaries and optional scripts remain in
+`score_audits/`; their undistributed sample-level inputs are not newly released.
+The optional older `--score-bundle` flag still verifies the separately supplied
+extended archive, including normalized controls. The two new original-expression
+archives are included directly in this repository.
 
-## Data, code and missing materials
+## Integrity
 
-AIT-ADS, AutoLabel and CERT r4.2 require obtaining the source data under the respective providers' conditions and licenses. The original data, all derived caches, trained checkpoints and complete adapted baseline pipelines are not included. AIT test-score predictions are available separately as described below; AutoLabel and CERT sample-level prediction files remain undistributed. Some snapshots/ scripts depend on historical experimental directories and should be treated as archived code, not end-to-end entry points. Exact raw-to-table reproducibility requires independently packaging and validating those dependencies, frozen split manifests, checkpoint provenance and sample-level predictions, subject to distribution permissions. This bundle makes no claim that those steps have been completed.
-
-MANIFEST.sha256 covers the snapshot files and the updated repository README. The supplemental REPRODUCIBILITY.sha256 covers the new reproduction scripts, documentation, expected values, and inputs used in these checks. Both manifests use SHA-256 and paths relative to the repository root.
-
-## Additional sample-score audits
-
-See [score_audits/README.md](score_audits/README.md) for aggregate CERT and AutoLabel audit summaries, optional scripts, separate dependencies and undistributed inputs.
-
-## Recomputing AIT from released per-session scores
-
-The 80 AIT test-score files are available as `data/ait_test_scores.zip`.
-They contain artificial scene/session IDs, binary session labels and numerical
-model scores, but no raw alerts or model weights. Extract the archive under an
-isolated output directory and run:
-
-    python -m zipfile -e data/ait_test_scores.zip ./ait_score_inputs
-    python recompute_ait_scores.py --prediction-dir ./ait_score_inputs/test_scores --output ./ait_score_check.csv
-
-The script computes tie-aware AP and recall at the retrospective 1% FPR budget
-for each scene/fold/seed/arm and checks 1,080 entries against the exported scene
-metrics. It does not train or infer, and does not independently validate labels.
-The archive includes AIT-ADS attribution, CC BY 4.0 license and modifications.
-Original NPZ containers were regenerated; therefore their byte hashes need not
-match the unpublished source-container digest in results/ait_score_audit.json.
-
-For the original training-chain dependency inventory and remaining missing
-inputs, see TRAINING_DEPENDENCIES.md.
+`MANIFEST.sha256` and `REPRODUCIBILITY.sha256` preserve and refresh the corresponding
+documented file sets. `portable/SHA256SUMS` covers all files in the new portable
+subtree other than itself. None is evidence of independently correct labels.

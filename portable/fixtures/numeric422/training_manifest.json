@@ -1,0 +1,23 @@
+{
+  "protocol": "422",
+  "fold": "fold_01",
+  "seed": 42,
+  "natural_training_rows": 4885,
+  "augmented_training_rows": 5507,
+  "files": {
+    "train.npz": "4ca411e34a8e957df5c7332e1a755b77328215a28923c09686f0c529ae03f447",
+    "validation.npz": "4ceea28305c7bdc368cb54fda4b6adc1cb0e508d6a8b0f9e9caaddf4da4fd822",
+    "training_params.json": "f59b54416f1174fc7d889c3363eb0926dca73130b0b08be09c69be6002174c31"
+  },
+  "source_export_files_sha256": {
+    "train_main_heads.npz": "fb6e3cf9e031102e536455baf9c15790f65fdf915febf27fda843f2e8b1b56b1",
+    "validation_main_heads.npz": "1f8385b10910c0389b39e9630b81a85c67e22720eef68d27118372b2eaf1ff77",
+    "training_params.json": "af868126feef5b42865d1e4b263ab6149e66e78c926f5f47cfbee8c1a14abc2c"
+  },
+  "compact_export_sha256": {
+    "train_compact.npz": "f87e4554bbd80593d443212e8ff0d7a489e4a257c4e935e6aaf5667481b90375",
+    "validation_compact.npz": "b9a77d73530dec9b2885f0a215e4afc0da24ff3b7b82d2b70a6feecc6eca0f79"
+  },
+  "local_evidence_sha256": "52358e8a68aa912d590210f6253f85ee213404298beb46c9ef167f2515db4589",
+  "scope": "Original prepared numerical matrices with frozen edits; three 300-tree heads plus three 54/53/53-tree experts can be retrained. Not raw preprocessing or all-fold retraining."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "source_copy": "clean independent directory",
+  "isolated_environment": true,
+  "command": "python run_reproduction.py --output-dir reproduced --include-training",
+  "frozen_and_retrained_test_scores_exact": true,
+  "reports": {
+    "ait_saved_score_receipt.json": {
+      "sha256": "030079c435235edb7ff6a270056dbcddf72d5b9a308835a91780d261fc28e8a7",
+      "status": "PASS"
+    },
+    "entity_switch/receipt.json": {
+      "sha256": "ea06e1ba4a8c3256bc9e369f91784ba4571eeed7bdd69b3fef599b1a09f86f6e",
+      "status": "PASS"
+    },
+    "matched_controls/receipt.json": {
+      "sha256": "7817db18ca95fd606b6ca0711e740932e0c4a15e9f349fce20b36d3e94feb91a",
+      "status": "PASS"
+    },
+    "frozen_inference/inference_receipt.json": {
+      "sha256": "b534abf323953642d687aabc2c8a490bdecd082313e19195bfade032506dcfdc",
+      "status": "PASS"
+    },
+    "numeric_retraining/training_receipt.json": {
+      "sha256": "3a4244f08ca19a0be0c7337703da4fb7094db3a3d19b4ac1c7d1cc92e7f32940",
+      "status": "PASS"
+    }
+  },
+  "scope": "Prepared-feature one-cell training/inference plus saved-score audits; not raw-data reconstruction."
+}

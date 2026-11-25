@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "sessions": 3520,
+  "exact_array_equal": true,
+  "max_abs_score_error": 0.0,
+  "absolute_tolerance": 1e-12,
+  "scope": "One 422 fold/seed, numeric features to three heads, protocol experts and fusion. No raw-log or label reconstruction.",
+  "model_source": "frozen reference",
+  "input_sha256": "533bd313b653fea74a4b2d4d624316550f56bd2343149deb4b52e1a67411433a"
+}

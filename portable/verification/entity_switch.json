@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "kind": "switch",
+  "cells": 80,
+  "array_files": 160,
+  "validation_cutoffs": 160,
+  "maximum_formula_error": 0.0,
+  "results": {
+    "611": {
+      "correction_off": {
+        "AP": 0.896787686343617,
+        "recall_1pct_fpr": 0.9176694139194138,
+        "scene_macro_frozen_recall": 0.9252481389578167,
+        "scene_macro_frozen_negative_rate": 0.02999722308068057,
+        "AP_seed_sample_sd": 0.0024521152725163965,
+        "frozen_counts_per_seed": [
+          394.4,
+          403.8,
+          403.0,
+          11079.0
+        ],
+        "record_queue_per_seed": [
+          88.8,
+          688.8,
+          52652.0,
+          52652.0
+        ],
+        "unique_positive_sessions_per_seed": 88.8,
+        "scene_AP": {
+          "fox": 0.8896320530963078,
+          "harrison": 0.9998126888502933,
+          "russellmitchell": 0.9115951331760563,
+          "santos": 0.998051086902654,
+          "shaw": 0.6715488488120067,
+          "wardbeck": 0.8852160704792285,
+          "wheeler": 0.9130945923587823,
+          "wilson": 0.9053510170736099
+        }
+      },
+      "augur": {
+        "AP": 0.8973825465328591,
+        "recall_1pct_fpr": 0.9158836996336994,
+        "scene_macro_frozen_recall": 0.9252481389578167,
+        "scene_macro_frozen_negative_rate": 0.03042237611318751,
+        "AP_seed_sample_sd": 0.00408256978989754,
+        "frozen_counts_per_seed": [
+          394.4,
+          410.0,
+          403.0,
+          11079.0
+        ],
+        "record_queue_per_seed": [
+          87.2,
+          679.0,
+          52652.0,
+          52652.0
+        ],
+        "unique_positive_sessions_per_seed": 87.2,
+        "scene_AP": {
+          "fox": 0.8896320530963078,
+          "harrison": 0.9998126888502933,
+          "russellmitchell": 0.9124838750422732,
+          "santos": 0.998051086902654,
+          "shaw": 0.6767967120598699,
+          "wardbeck": 0.8836612364243944,
+          "wheeler": 0.9130310919818116,
+          "wilson": 0.9055916279052688
+        }
+      }
+    },
+    "422": {
+      "correction_off": {
+        "AP": 0.8581783971219007,
+        "recall_1pct_fpr": 0.9024412516247192,
+        "scene_macro_frozen_recall": 0.8128755317263383,
+        "scene_macro_frozen_negative_rate": 0.012559276160767083,
+        "AP_seed_sample_sd": 0.004799809329256199,
+        "frozen_counts_per_seed": [
+          771.8,
+          326.8,
+          806.0,
+          22158.0
+        ],
+        "record_queue_per_seed": [
+          168.0,
+          616.2,
+          105306.0,
+          105306.0
+        ],
+        "unique_positive_sessions_per_seed": 118.2,
+        "scene_AP": {
+          "fox": 0.8644206969016949,
+          "harrison": 0.9998435458923398,
+          "russellmitchell": 0.9128442212130489,
+          "santos": 0.9953934569984944,
+          "shaw": 0.6065763398793196,
+          "wardbeck": 0.7229692860132214,
+          "wheeler": 0.9203738904430014,
+          "wilson": 0.8430057396340859
+        }
+      },
+      "augur": {
+        "AP": 0.8618689430595918,
+        "recall_1pct_fpr": 0.9054285197329552,
+        "scene_macro_frozen_recall": 0.8149588650596717,
+        "scene_macro_frozen_negative_rate": 0.012093077026654991,
+        "AP_seed_sample_sd": 0.0033526908920248834,
+        "frozen_counts_per_seed": [
+          771.8,
+          313.0,
+          806.0,
+          22158.0
+        ],
+        "record_queue_per_seed": [
+          169.2,
+          625.0,
+          105306.0,
+          105306.0
+        ],
+        "unique_positive_sessions_per_seed": 118.0,
+        "scene_AP": {
+          "fox": 0.8696974438008779,
+          "harrison": 0.9998416306238191,
+          "russellmitchell": 0.9130584193249109,
+          "santos": 0.9955107709435064,
+          "shaw": 0.6101933220346938,
+          "wardbeck": 0.7336784192904314,
+          "wheeler": 0.9203711918246942,
+          "wilson": 0.8526003466338002
+        }
+      }
+    }
+  },
+  "ordered_queue_sha256": "0e4a1b99ec0a16f88de0d65a031a662503b86594ad026b2df930a02b17ff0a04",
+  "scope": "Frozen score-to-metric and deterministic queue replay; not training or independent label verification. Queue digests describe reconstructed membership, not an unavailable historical ordered-list receipt."
+}

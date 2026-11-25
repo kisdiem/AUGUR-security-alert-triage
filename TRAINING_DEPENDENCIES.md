@@ -1,6 +1,9 @@
 # Inventory of the original AIT training chain
 
-This is an audit of the original research workspace, not an end-to-end release. The current repository does not contain every input listed below.
+This inventories the original research chain. The portable release now includes
+one 4/2/2 numerical training/inference cell and both complete original-expression
+score audits; see portable/README.md. The raw-data chain and every cell/model below
+are still not all included. This inventory does not redefine the portable scope.
 
 ## Top-level execution and dependencies
 

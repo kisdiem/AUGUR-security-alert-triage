@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "kind": "matched",
+  "cells": 80,
+  "array_files": 160,
+  "validation_cutoffs": 240,
+  "maximum_formula_error": 0.0,
+  "results": {
+    "611": {
+      "current": {
+        "AP": 0.8708254450540547,
+        "recall_1pct_fpr": 0.851415721375399,
+        "scene_macro_frozen_recall": 0.9140301902398678,
+        "scene_macro_frozen_negative_rate": 0.019781423640830027,
+        "AP_seed_sample_sd": 0.002567717599651313,
+        "frozen_counts_per_seed": [
+          393.2,
+          242.6,
+          403.0,
+          11079.0
+        ],
+        "record_queue_per_seed": [
+          86.4,
+          618.2,
+          52652.0,
+          52652.0
+        ],
+        "unique_positive_sessions_per_seed": 86.4,
+        "scene_AP": {
+          "fox": 0.8851409013338156,
+          "harrison": 0.9990308755134173,
+          "russellmitchell": 0.8984304488903418,
+          "santos": 0.9980501938790567,
+          "shaw": 0.5641143342594417,
+          "wardbeck": 0.826807047580511,
+          "wheeler": 0.9838766788766788,
+          "wilson": 0.8111530800991755
+        }
+      },
+      "host_reference": {
+        "AP": 0.8941333589674395,
+        "recall_1pct_fpr": 0.8972527472527473,
+        "scene_macro_frozen_recall": 0.9258731389578166,
+        "scene_macro_frozen_negative_rate": 0.03423324946119392,
+        "AP_seed_sample_sd": 0.005063747519455735,
+        "frozen_counts_per_seed": [
+          393.0,
+          464.0,
+          403.0,
+          11079.0
+        ],
+        "record_queue_per_seed": [
+          87.2,
+          660.2,
+          52652.0,
+          52652.0
+        ],
+        "unique_positive_sessions_per_seed": 87.2,
+        "scene_AP": {
+          "fox": 0.8861872759780891,
+          "harrison": 0.9998323212646625,
+          "russellmitchell": 0.912359553901136,
+          "santos": 0.9978406920079026,
+          "shaw": 0.662446230077809,
+          "wardbeck": 0.8679344117136107,
+          "wheeler": 0.9166275268867826,
+          "wilson": 0.9098388599095231
+        }
+      },
+      "augur": {
+        "AP": 0.8973825465328591,
+        "recall_1pct_fpr": 0.9158836996336994,
+        "scene_macro_frozen_recall": 0.9252481389578167,
+        "scene_macro_frozen_negative_rate": 0.03042237611318751,
+        "AP_seed_sample_sd": 0.00408256978989754,
+        "frozen_counts_per_seed": [
+          394.4,
+          410.0,
+          403.0,
+          11079.0
+        ],
+        "record_queue_per_seed": [
+          87.2,
+          679.0,
+          52652.0,
+          52652.0
+        ],
+        "unique_positive_sessions_per_seed": 87.2,
+        "scene_AP": {
+          "fox": 0.8896320530963078,
+          "harrison": 0.9998126888502933,
+          "russellmitchell": 0.9124838750422732,
+          "santos": 0.998051086902654,
+          "shaw": 0.6767967120598699,
+          "wardbeck": 0.8836612364243944,
+          "wheeler": 0.9130310919818116,
+          "wilson": 0.9055916279052688
+        }
+      }
+    },
+    "422": {
+      "current": {
+        "AP": 0.8297581274879064,
+        "recall_1pct_fpr": 0.8480521830320219,
+        "scene_macro_frozen_recall": 0.8002339595887985,
+        "scene_macro_frozen_negative_rate": 0.012712396032362175,
+        "AP_seed_sample_sd": 0.005420482825895466,
+        "frozen_counts_per_seed": [
+          769.2,
+          269.0,
+          806.0,
+          22158.0
+        ],
+        "record_queue_per_seed": [
+          168.2,
+          826.8,
+          105306.0,
+          105306.0
+        ],
+        "unique_positive_sessions_per_seed": 111.6,
+        "scene_AP": {
+          "fox": 0.830713346846301,
+          "harrison": 0.9996547116460835,
+          "russellmitchell": 0.8596225052420401,
+          "santos": 0.9960129317774105,
+          "shaw": 0.5844208020242622,
+          "wardbeck": 0.72198104611878,
+          "wheeler": 0.9224618432056204,
+          "wilson": 0.7231978330427534
+        }
+      },
+      "host_reference": {
+        "AP": 0.8615827893102983,
+        "recall_1pct_fpr": 0.8973916976840363,
+        "scene_macro_frozen_recall": 0.8178423726810825,
+        "scene_macro_frozen_negative_rate": 0.012230305707566568,
+        "AP_seed_sample_sd": 0.0028282043967271854,
+        "frozen_counts_per_seed": [
+          771.6,
+          313.6,
+          806.0,
+          22158.0
+        ],
+        "record_queue_per_seed": [
+          165.6,
+          609.4,
+          105306.0,
+          105306.0
+        ],
+        "unique_positive_sessions_per_seed": 113.2,
+        "scene_AP": {
+          "fox": 0.8646359459035791,
+          "harrison": 0.9997672868763516,
+          "russellmitchell": 0.9076056763897732,
+          "santos": 0.9954431464976196,
+          "shaw": 0.6150979900203905,
+          "wardbeck": 0.735633872220044,
+          "wheeler": 0.916453699944444,
+          "wilson": 0.8580246966301843
+        }
+      },
+      "augur": {
+        "AP": 0.8618689430595918,
+        "recall_1pct_fpr": 0.9054285197329552,
+        "scene_macro_frozen_recall": 0.8149588650596717,
+        "scene_macro_frozen_negative_rate": 0.012093077026654991,
+        "AP_seed_sample_sd": 0.0033526908920248834,
+        "frozen_counts_per_seed": [
+          771.8,
+          313.0,
+          806.0,
+          22158.0
+        ],
+        "record_queue_per_seed": [
+          169.2,
+          625.0,
+          105306.0,
+          105306.0
+        ],
+        "unique_positive_sessions_per_seed": 118.0,
+        "scene_AP": {
+          "fox": 0.8696974438008779,
+          "harrison": 0.9998416306238191,
+          "russellmitchell": 0.9130584193249109,
+          "santos": 0.9955107709435064,
+          "shaw": 0.6101933220346938,
+          "wardbeck": 0.7336784192904314,
+          "wheeler": 0.9203711918246942,
+          "wilson": 0.8526003466338002
+        }
+      }
+    }
+  },
+  "ordered_queue_sha256": "bfd6ed791b6f4cf72f6167cc07616605b6bd61e97d24d2ddd5e98c7e3775875e",
+  "scope": "Frozen score-to-metric and deterministic queue replay; not training or independent label verification. Queue digests describe reconstructed membership, not an unavailable historical ordered-list receipt."
+}

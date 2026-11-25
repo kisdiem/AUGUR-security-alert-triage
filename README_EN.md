@@ -1,48 +1,25 @@
-# AUGUR research artifact
+# AUGUR: maintained historical evidence for security-alert session ranking
 
-This repository provides source snapshots for event-preceding historical state,
-entity features, controlled expression editing, local scoring, and score fusion,
-along with selected exported metrics and fixed experimental configurations.
-
-## Quick verification
-
-Use Python 3.11 or newer and install the pinned dependency from requirements.txt.
-Run:
+The historical snapshots remain unchanged. Portable, versioned entry points are
+provided under `portable/`, with original prepared numerical fixtures and saved
+validation/test scores. Start in a fresh directory and install the pinned runtime:
 
 ```sh
-python -m pip install -r requirements.txt
-python run_reproduction.py --output-dir ./reproduced_tables
+python -m pip install -r requirements-reproduction.txt
+python run_reproduction.py --output-dir reproduced --include-training
 ```
 
-This checks the state and fusion contracts on synthetic streams, recomputes
-240 validation cutoffs and review decisions from released AIT-ADS scores,
-and checks 36 archived AIT, AutoLabel, and CERT table rows. The default run
-needs only the files in this repository and NumPy. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
-for the commands, verified quantities, and the scope of the optional extended audit.
+The run checks state contracts and streaming invariants; 36 archived metric rows;
+240 original validation cutoffs; 80 entity-switch cells; 80 original-expression
+matched-control cells; and frozen numerical inference for 3,520 sessions. The
+training option fits all three main forests and three protocol experts for the
+supplied 4/2/2 fold/seed from original prepared matrices, seals validation cutoffs,
+then compares test predictions with the frozen reference. It does not select a
+configuration using test results. Omit the flag for score/inference checks only.
 
-An additional [AIT score-audit summary](results/ait_score_audit.json) reports
-checks performed on the authors' per-session scores; the 80 AIT score files are available in `data/ait_test_scores.zip`.
-
-## Contents
-
-- `state_124/`: cumulative state implementation and synthetic checks.
-- `current/`: direct-entity readout and score-fusion implementation.
-- `snapshots/`: selected training, expression-editing, and local-scoring code.
-- `configs/` and `results/`: experiment configurations and exported summaries.
-- `MANIFEST.sha256` and `REPRODUCIBILITY.sha256`: file-integrity checks.
-
-## Data and reproducibility boundary
-
-AIT-ADS, AutoLabel, and CERT r4.2 data must be obtained from their respective
-providers and used in accordance with their licenses. Raw data, full derived
-caches, trained model checkpoints, AutoLabel/CERT predictions, and complete
-adapted baseline pipelines are not included. Some historical scripts require
-those missing inputs, so this snapshot does not yet support independent
-raw-data-to-table reproduction.
-
-The eight AIT scenes participated in method development. AutoLabel and CERT
-use task-specific state adaptations, not the complete AIT three-branch model.
-Their evaluation units differ. The retrospective Recall@1% FPR statistic is a
-test-ranking budget, not a frozen deployment threshold.
-
-Aggregate-only CERT and AutoLabel sample-score audit reports and optional verification scripts are documented in [score_audits/README.md](score_audits/README.md).
+See [portable/README.md](portable/README.md) for separate commands and provenance.
+This is not a claim of all-fold retraining or raw-data-to-table reproduction.
+Raw text preparation, encoding and independent label reconstruction, other
+baseline pipelines, external sample-score releases and full service replay remain
+outside the portable release. Historical input snapshots are supplied for
+traceability, not represented as standalone raw-data entry points.

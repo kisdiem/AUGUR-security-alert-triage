@@ -1,0 +1,300 @@
+{
+  "seeds": [
+    42,
+    1337,
+    31415,
+    2025,
+    8675309
+  ],
+  "assignments": {
+    "611_fold_01": {
+      "protocol": "611",
+      "fold": "fold_01",
+      "validation_scenes": [
+        "harrison"
+      ],
+      "test_scenes": [
+        "fox"
+      ],
+      "train_scenes": [
+        "russellmitchell",
+        "santos",
+        "shaw",
+        "wardbeck",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "611_fold_02": {
+      "protocol": "611",
+      "fold": "fold_02",
+      "validation_scenes": [
+        "russellmitchell"
+      ],
+      "test_scenes": [
+        "harrison"
+      ],
+      "train_scenes": [
+        "fox",
+        "santos",
+        "shaw",
+        "wardbeck",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "611_fold_03": {
+      "protocol": "611",
+      "fold": "fold_03",
+      "validation_scenes": [
+        "santos"
+      ],
+      "test_scenes": [
+        "russellmitchell"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "shaw",
+        "wardbeck",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "611_fold_04": {
+      "protocol": "611",
+      "fold": "fold_04",
+      "validation_scenes": [
+        "shaw"
+      ],
+      "test_scenes": [
+        "santos"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "russellmitchell",
+        "wardbeck",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "611_fold_05": {
+      "protocol": "611",
+      "fold": "fold_05",
+      "validation_scenes": [
+        "wardbeck"
+      ],
+      "test_scenes": [
+        "shaw"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "russellmitchell",
+        "santos",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "611_fold_06": {
+      "protocol": "611",
+      "fold": "fold_06",
+      "validation_scenes": [
+        "wheeler"
+      ],
+      "test_scenes": [
+        "wardbeck"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "russellmitchell",
+        "santos",
+        "shaw",
+        "wilson"
+      ]
+    },
+    "611_fold_07": {
+      "protocol": "611",
+      "fold": "fold_07",
+      "validation_scenes": [
+        "wilson"
+      ],
+      "test_scenes": [
+        "wheeler"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "russellmitchell",
+        "santos",
+        "shaw",
+        "wardbeck"
+      ]
+    },
+    "611_fold_08": {
+      "protocol": "611",
+      "fold": "fold_08",
+      "validation_scenes": [
+        "fox"
+      ],
+      "test_scenes": [
+        "wilson"
+      ],
+      "train_scenes": [
+        "harrison",
+        "russellmitchell",
+        "santos",
+        "shaw",
+        "wardbeck",
+        "wheeler"
+      ]
+    },
+    "422_fold_01": {
+      "protocol": "422",
+      "fold": "fold_01",
+      "validation_scenes": [
+        "shaw",
+        "wardbeck"
+      ],
+      "test_scenes": [
+        "wheeler",
+        "wilson"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "russellmitchell",
+        "santos"
+      ]
+    },
+    "422_fold_02": {
+      "protocol": "422",
+      "fold": "fold_02",
+      "validation_scenes": [
+        "wardbeck",
+        "wheeler"
+      ],
+      "test_scenes": [
+        "fox",
+        "wilson"
+      ],
+      "train_scenes": [
+        "harrison",
+        "russellmitchell",
+        "santos",
+        "shaw"
+      ]
+    },
+    "422_fold_03": {
+      "protocol": "422",
+      "fold": "fold_03",
+      "validation_scenes": [
+        "wheeler",
+        "wilson"
+      ],
+      "test_scenes": [
+        "fox",
+        "harrison"
+      ],
+      "train_scenes": [
+        "russellmitchell",
+        "santos",
+        "shaw",
+        "wardbeck"
+      ]
+    },
+    "422_fold_04": {
+      "protocol": "422",
+      "fold": "fold_04",
+      "validation_scenes": [
+        "fox",
+        "wilson"
+      ],
+      "test_scenes": [
+        "harrison",
+        "russellmitchell"
+      ],
+      "train_scenes": [
+        "santos",
+        "shaw",
+        "wardbeck",
+        "wheeler"
+      ]
+    },
+    "422_fold_05": {
+      "protocol": "422",
+      "fold": "fold_05",
+      "validation_scenes": [
+        "fox",
+        "harrison"
+      ],
+      "test_scenes": [
+        "russellmitchell",
+        "santos"
+      ],
+      "train_scenes": [
+        "shaw",
+        "wardbeck",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "422_fold_06": {
+      "protocol": "422",
+      "fold": "fold_06",
+      "validation_scenes": [
+        "harrison",
+        "russellmitchell"
+      ],
+      "test_scenes": [
+        "santos",
+        "shaw"
+      ],
+      "train_scenes": [
+        "fox",
+        "wardbeck",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "422_fold_07": {
+      "protocol": "422",
+      "fold": "fold_07",
+      "validation_scenes": [
+        "russellmitchell",
+        "santos"
+      ],
+      "test_scenes": [
+        "shaw",
+        "wardbeck"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "wheeler",
+        "wilson"
+      ]
+    },
+    "422_fold_08": {
+      "protocol": "422",
+      "fold": "fold_08",
+      "validation_scenes": [
+        "santos",
+        "shaw"
+      ],
+      "test_scenes": [
+        "wardbeck",
+        "wheeler"
+      ],
+      "train_scenes": [
+        "fox",
+        "harrison",
+        "russellmitchell",
+        "wilson"
+      ]
+    }
+  },
+  "scope": "Scene assignments inferred from original sealed validation/test rosters; training scenes are their complement. Not a new split or reconstruction of raw session grouping."
+}

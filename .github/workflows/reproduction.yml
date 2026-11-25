@@ -1,12 +1,7 @@
-name: Reproduction smoke test
-
-on:
-  push:
-  pull_request:
-
+name: Portable reproduction
+on: [push, pull_request]
 permissions:
   contents: read
-
 jobs:
   verify:
     strategy:
@@ -22,5 +17,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m pip install -r requirements.txt
-      - run: python run_reproduction.py --output-dir reproduced_tables
+      - run: python -m pip install -r requirements-reproduction.txt
+      - run: python run_reproduction.py --output-dir reproduced --include-training
